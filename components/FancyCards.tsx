@@ -36,23 +36,59 @@ const styles = StyleSheet.create({
     },
 
     cardElevated: {
-
+        backgroundColor: '#CAD5E2',
+        elevation: 8,
+        shadowOffset: {
+            width: 1, 
+            height: 1,
+        }, 
+        shadowColor: 'black',
+        shadowOpacity: 1, 
+        shadowRadius: 1,
     }, 
     
     card : {
+        width: 350, 
+        height: 350, 
+        borderRadius: 8, 
+        marginVertical: 12, 
+        marginHorizontal: 16,
 
     },
 
     cardImage: {
-        height: 400, 
-        width : '100%',
+        height: 180,
+        marginBottom: 10,
+        borderTopLeftRadius: 25, 
+        borderTopRightRadius: 25,
     }, 
     
     cardBody: {
+        flex: 1, 
+        flexGrow: 1,
+        paddingHorizontal: 15,
     }, 
 
-    cardTitle: {}, 
-    cardDescription: {}, 
-    cardLabel: {}, 
-    cardFooter: {}, 
+    cardTitle: {
+        color: 'black', 
+        fontSize: 22, 
+        marginBottom: 8,
+        fontWeight: 'bold',
+    }, 
+    cardDescription: {
+        color: 'black', 
+        fontSize: 16, 
+        fontWeight: '600', 
+        marginBottom: 8,
+    }, 
+    cardLabel: {
+        color: 'black', 
+        fontSize: 14, 
+        fontWeight: '600', 
+        marginBottom: 4
+    }, 
+    cardFooter: {
+        color: 'black',
+        flexShrink: 1,
+    }, 
 })
