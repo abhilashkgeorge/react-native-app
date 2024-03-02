@@ -19,13 +19,26 @@ export default function ActionCards() {
                     style={styles.cardImage}
                 />
                 <View style={styles.bodyContainer}>
+                    <Text numberOfLines={3}>
+                        Tech Wallpaper - Electronics (#2599347) - HD Wallpaper & Backgrounds Download
+                        Tech Wallpaper - Electronics is hd wallpapers & backgrounds for desktop or mobile device. To find more wallpapers on Itl.cat.
+                    </Text>
+                    </View>
+                    <View style={styles.footerContainer}>
+
                     <TouchableOpacity
                     onPress={() => openWebsite('https://www.abhilashkgeorge.com')}>
                         <Text style={styles.readMoreButtonText}>
                             Read More...
                         </Text>
                     </TouchableOpacity>
-                </View>
+                    <TouchableOpacity
+                    onPress={() => openWebsite('https://www.abhilashkgeorge.com')}>
+                        <Text style={styles.readMoreButtonText}>
+                            Follow Me...
+                        </Text>
+                    </TouchableOpacity>
+                    </View>
             </View>
         </View>
     )
@@ -38,17 +51,57 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         paddingHorizontal: 15,
     },
-    card: {},
-    elevatedCard: {},
-    headingContainer: {},
+    card: {
+        // width: 350,
+        height: 380,
+        borderRadius: 8,
+        marginVertical: 12, 
+        marginHorizontal: 16
+    },
+    elevatedCard: {
+        backgroundColor: 'orange',
+        elevation: 8,
+        shadowOffset: {
+            width: 1, 
+            height: 1, 
+        }, 
+        shadowColor: 'black',
+        shadowOpacity: 1, 
+        shadowRadius: 1,
+    },
+    headingContainer: {
+        height: 40, 
+        flexDirection: 'row', 
+        justifyContent: 'center', 
+        alignItems: 'center'
+    },
     cardImage: {
         height: 200,
         marginBottom: 5,
         marginLeft: 10,
         marginRight: 10,
+        resizeMode: 'stretch'
     },
-    headerText: {},
-    bodyContainer: {},
-    footerContainer: {},
-    readMoreButtonText: {},
+    headerText: {
+        color: '#000000',
+        fontSize: 16, 
+        fontWeight: '600'
+    },
+    bodyContainer: {
+        padding: 10
+    },
+    footerContainer: {
+        padding: 10, 
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+    },
+    readMoreButtonText: {
+        fontSize: 16, 
+        color: 'blue', 
+        backgroundColor: 'white',
+        paddingHorizontal: 20, 
+        paddingVertical: 8,
+        borderRadius: 8
+    },
 })
