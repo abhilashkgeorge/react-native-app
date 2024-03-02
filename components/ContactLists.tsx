@@ -39,8 +39,10 @@ export default function ContactLists() {
                     uri: imageUrl
                 }}
                 style={styles.userImage}/>
+                <View>
                 <Text style={styles.userName}>{name}</Text>
                 <Text style={styles.userStatus}>{status}</Text>
+                </View>
 
             </View>
         ))}
@@ -51,7 +53,7 @@ export default function ContactLists() {
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: 'row'
+        padding: 16,
     },
     headingText: {
         fontSize: 24, 
@@ -59,17 +61,28 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
     },
     userCard: {
-
+        flex: 1, 
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 8,
+        backgroundColor: '#8D3DAF',
+        borderRadius: 8,
+        padding: 4,
     },
     userImage: {
         height: 60,
         width: 60,
-        borderRadius: 60 /2
+        borderRadius: 60 /2,
+        marginRight: 16,
+        marginBottom: 4,
     },
     userName: {
-
+        fontSize: 16, 
+        fontWeight: '800',
+        color: 'black'
     }, 
     userStatus: {
+        fontSize: 13
 
     }
 })
